@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "Geometry Cache Alembic Exporter for Unreal Engine 5.8"
+message: "If this project helps your work, please cite or link to the GitHub repository."
+type: software
+authors:
+  - name: "Gabriel W Field"
+    affiliation: "Open-source contributors"
+version: "0.1.0"
+date-released: 2026-09-13
+license: Apache-2.0
+repository-code: "https://github.com/Gabriel-W-Field/GeometryCacheExport_UE5.8"
+keywords:
+  - Unreal Engine
+  - UE5.8
+  - Geometry Cache
+  - Alembic
+  - Blender
+  - geometry export

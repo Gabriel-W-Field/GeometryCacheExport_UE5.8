@@ -1,0 +1,30 @@
+# Geometry Cache Alembic Exporter
+
+> Open-source Unreal Engine 5.8 Editor plugin that exports Geometry Cache assets to Alembic .abc.
+
+## Canonical documents
+
+- README.md: bilingual user documentation, installation, scope, license, and limitations.
+- docs/ARCHITECTURE.md: implementation path and round-trip behavior.
+- AGENTS.md: source map, invariants, safe modification strategy, and build guidance.
+- THIRD_PARTY_NOTICES.md: Unreal Engine, Alembic, and Imath boundary.
+- CONTRIBUTING.md: contribution requirements.
+- SECURITY.md: private reporting guidance.
+- LICENSE: Apache License 2.0 for this repository's original code.
+
+## Technical summary
+
+- UE5.8 Win64 Editor-only plugin.
+- Content Browser context-menu export for UGeometryCache.
+- Streamable tracks are sampled by exact sample index, not floating-point time lookup.
+- Mesh data is written to Alembic OPolyMesh.
+- Track MatrixSamples are obtained through UpdateMatrixData and written to a parent Alembic OXform.
+- Material assignments are written as time-aligned OFaceSet schemas.
+- Current export grid is fixed at 30 FPS and uses the full asset duration.
+
+## Safe boundaries
+
+- Do not add Unreal Engine files, proprietary assets, or third-party SDK binaries to this repository.
+- Do not force constant-topology optimization when source indices or face counts vary.
+- Do not install or overwrite a user's project plugin during development without explicit instruction.
+- The UE5.8 binary package is not a universal package for other engine versions.

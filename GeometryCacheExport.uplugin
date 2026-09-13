@@ -1,0 +1,28 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "0.1.0",
+  "FriendlyName": "Geometry Cache Alembic Exporter",
+  "Description": "Exports Geometry Cache assets to Alembic .abc files from the Unreal Editor.",
+  "Category": "Animation",
+  "CreatedBy": "ABCclip",
+  "CanContainContent": false,
+  "IsBetaVersion": true,
+  "Plugins": [
+    {
+      "Name": "GeometryCache",
+      "Enabled": true
+    },
+    {
+      "Name": "AlembicImporter",
+      "Enabled": true
+    }
+  ],
+  "Modules": [
+    {
+      "Name": "GeometryCacheExportEditor",
+      "Type": "Editor",
+      "LoadingPhase": "PostEngineInit"
+    }
+  ]
+}
